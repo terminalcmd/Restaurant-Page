@@ -1,0 +1,422 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    border-bottom:2px solid ;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    background-color: black;
+}
+
+nav {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-div {
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2rem;
+    background-color: lightgray;
+}
+.total-home-div{
+    background-image: url(Restaurant-Image.jpg);
+    background-size:100%;
+    position: relative;
+
+}
+.total-home-div,.total-menu-div,.total-about-div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-style {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightyellow;
+    opacity: .9;
+    
+}
+.home-rights{
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    color:white;
+    text-decoration: none;
+}
+.home-rights:hover{
+    text-decoration: underline;
+}
+
+.home-style,.about-style{
+    padding-bottom: 20px; 
+    border-radius: 10px;
+    border: 2px solid ;
+
+}
+.home-style,.menu-style,.about-style{
+    margin-bottom: 20px;
+}
+
+.home-whole-time-div,
+.home-location-div {
+    margin-top: 100px;
+}
+
+.home-title-div,
+.about-title,
+.menu-title-div {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.home-title-div,
+.about-title,
+.menu-title-div,
+.home-style,.menu-style,.about-style {
+    margin-top: 20px;
+}
+
+.home-intro-div {
+    margin-top: 50px;
+    border: 5px solid goldenrod;
+    border-radius: 10px;
+    background-color: lightyellow;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    border-bottom-right-radius: 0px;
+    width: 70%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-intro-div p {
+    font-size: 1.3rem;
+    max-width: 70%;
+}
+
+.home-whole-time-div {
+    width: 60%;
+    height: 500px;
+}
+
+.home-whole-time-div>div:first-child {
+    margin-top: 20px;
+}
+
+.home-whole-time-div>div:first-child,
+.home-location-div>div {
+    margin-left: 20px;
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+.home-whole-time-div,
+.home-location-div {
+    border: 5px solid goldenrod;
+    background-color: lightyellow;
+    border-radius: 10px;
+}
+
+.home-timing-div {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    display: grid;
+    place-content: center;
+    height: 400px;
+}
+
+.home-location-div {
+    width: 60%;
+    height: 100px;
+}
+
+.home-location-div>p,
+.home-location-div>div,
+.menu-style> :not(div:first-child) {
+    margin-top: 10px;
+}
+
+.home-location-div>p {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.menu-style {
+    width: 95%;
+}
+.menu-style a,.about-style a {
+    text-decoration: none;
+}
+.menu-style a:hover,.about-style a:hover{
+    text-decoration: underline;
+}
+.total-menu-div{
+    background-color: lightblue;
+}
+
+.menu-title-div,
+.menu-bev-div,
+.menu-main-dish-div,
+.menu-sweet-dish-div {
+    text-align: center;
+}
+
+.menu-bev-div,
+.menu-main-dish-div,
+.menu-sweet-dish-div {
+    font-size: 1.6rem;
+    margin: 0 10px 0 10px;
+}
+
+.menu-bev-div>div,
+.menu-main-dish-div>div,
+.menu-sweet-dish-div>div {
+    margin-top: 20px;
+}
+
+.menu-all-bev-div,
+.menu-all-dish-div,
+.menu-all-sweet-div {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  
+}
+
+.menu-all-bev-div>div,
+.menu-all-dish-div>div,
+.menu-all-sweet-div>div {
+    height: 250px;
+    border: 3px solid;
+    border-left-color: yellow;
+    border-left-width: 8px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+}
+
+.menu-all-bev-div>div:first-child>div:nth-child(3){
+    background-image:url(Red-Juice.jpg);
+    background-size:110%;
+}
+.menu-all-bev-div>div:nth-child(2)>div:nth-child(3){
+    background-image:url(Orange-Juice.jpg);
+    background-size:95%;
+    background-position:20px -200px ;
+    background-repeat: no-repeat;
+}
+.menu-all-bev-div>div:nth-child(3)>div:nth-child(3){
+    background-image: url(Blue-Juice.jpg);
+    background-size: 110%;
+}
+.menu-all-dish-div> div:nth-child(1) > div:nth-child(3){
+    background: url(panner-img.png);
+    background-size: 100%;
+    background-position:0 -100px;
+    background-repeat: no-repeat;
+
+}
+.menu-all-dish-div> div:nth-child(2) > div:nth-child(3){
+    background-image: url(dal-Makhni.png);
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+.menu-all-dish-div> div:nth-child(3) > div:nth-child(3){
+    background-image: url(chole-bhature.jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+.menu-all-sweet-div> div:nth-child(1) > div:nth-child(3){
+    background-image: url(pastry.jpg);
+    background-size: 100%;
+    background-position:0 -240px;
+    background-repeat: no-repeat;
+}
+.menu-all-sweet-div> div:nth-child(2) > div:nth-child(3){
+    background-image: url(gulab-jamun.jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+}
+.menu-all-sweet-div> div:nth-child(3) > div:nth-child(3){
+    background-image: url(sundae.jpg);
+    background-size: cover;
+    background-position:0 -160px;
+    background-repeat: no-repeat;
+}
+.menu-all-bev-div > div:nth-child(1),
+.menu-all-bev-div > div:nth-child(2),
+.menu-all-bev-div > div:nth-child(3),
+.menu-all-dish-div>div:nth-child(1),
+.menu-all-dish-div>div:nth-child(2),
+.menu-all-dish-div>div:nth-child(3),
+.menu-all-sweet-div >div:nth-child(1),
+.menu-all-sweet-div >div:nth-child(2),
+.menu-all-sweet-div >div:nth-child(3){
+    position: relative;
+}
+.menu-all-bev-div>div:nth-child(1)>a,
+.menu-all-bev-div>div:nth-child(2)>a,
+.menu-all-bev-div>div:nth-child(3)>a,
+.menu-all-dish-div>div:nth-child(1)>a,
+.menu-all-dish-div>div:nth-child(2)>a,
+.menu-all-dish-div>div:nth-child(3)>a,
+.menu-all-sweet-div >div:nth-child(1)>a,
+.menu-all-sweet-div >div:nth-child(2)>a,
+.menu-all-sweet-div >div:nth-child(3)>a,
+.about-style>div:nth-child(2) >a{
+    position: absolute;
+    background-color: rgb(0 0 0 /0.6);
+    color:rgb(255 255 255 /0.9);
+    font-weight: bold;
+    font-size:0.9rem;
+    right: 0;
+    bottom:0;
+}
+
+
+
+.menu-all-bev-div>div>div:first-child,
+.menu-all-dish-div>div>div:first-child,
+.menu-all-sweet-div>div>div:first-child {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    font-size: 1.4rem;
+}
+
+.menu-all-bev-div>div>div:nth-child(2),
+.menu-all-dish-div>div>div:nth-child(2),
+.menu-all-sweet-div>div>div:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-size: 1.2rem;
+}
+
+.menu-all-bev-div>div>div:nth-child(3),
+.menu-all-dish-div>div>div:nth-child(3),
+.menu-all-sweet-div>div>div:nth-child(3) {
+    grid-column: 2/4;
+    grid-row: 1/4;
+}
+
+.menu-all-bev-div>div>div:first-child,
+.menu-all-bev-div>div>div:nth-child(2),
+.menu-all-bev-div>div>div:nth-child(3),
+.menu-all-dish-div>div>div:first-child,
+.menu-all-dish-div>div>div:nth-child(2),
+.menu-all-dish-div>div>div:nth-child(3),
+.menu-all-sweet-div>div>div:first-child,
+.menu-all-sweet-div>div>div:nth-child(2),
+.menu-all-sweet-div>div>div:nth-child(3) {
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+.total-about-div{
+    background-color: lightseagreen;
+}
+.about-style {
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.about-style>div:nth-child(2){
+    border:1px solid;
+}
+
+.about-style>div:nth-child(2),
+.about-style>div:nth-child(3),
+.about-style>div:nth-child(4) {
+    margin-top: 20px;
+}
+
+.about-style>div:nth-child(3) {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 5px solid orange;
+    background-color: lightyellow;
+}
+.about-style>div:nth-child(3) > div{
+    max-width: 50%;
+    text-align: center;
+}
+
+.about-style>div:nth-child(2) {
+    width: 100%;
+    height: 400px;
+    background-image: url(about-us-img.jpg);
+    background-size: 100%;
+    background-position: 0px -500px;
+    position: relative;
+}
+
+
+.about-style>div:nth-child(4) {
+    width: 80%;
+    height: 200px;
+    border: 3px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.about-style>div:nth-child(4)> div:nth-child(1){
+    font-size:1.6rem;
+    margin-bottom: 10px;
+}
+
+.about-style>div:nth-child(4)> div:nth-child(2),.about-style>div:nth-child(4)> div:nth-child(3){
+ font-size: 1.1rem;
+}
+
+.about-style>div:nth-child(4)> div:nth-child(1),
+.about-style>div:nth-child(4)> div:nth-child(1),
+.about-style>div:nth-child(4)> div:nth-child(1){
+margin-top:10px;
+}
